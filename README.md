@@ -7,14 +7,14 @@
 <div>정의된 Message를 data와 함께 호출 합니다.</div>
 <div>보내는쪽: <br> mediator.notification(mediator.config.GET_SHOP_LIST, {});</div>
 <br>
-<div>받는 쪽:<br> &nbsprespondToGetShopList(mediator, data) {<br>
-&nbsp&nbsplet sendData = {<br>
-&nbsp&nbsp&nbsp'receiver': mediator.config.RECEIVE_SHOP_LIST<br>
-&nbsp&nbsp&nbsp, 'namespace' : "shop.Shop.getShopList"<br>
-&nbsp&nbsp&nbsp, "data": {<br>
-&nbsp&nbsp&nbsp&nbsp'type': 'all'<br>
-&nbsp&nbsp&nbsp}<br>
+<div>받는 쪽:<br> &nbsp&nbsprespondToGetShopList(mediator, data) {<br>
+&nbsp&nbsp&nbsp&nbsplet sendData = {<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'receiver': mediator.config.RECEIVE_SHOP_LIST<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp, 'namespace' : "shop.Shop.getShopList"<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp, "data": {<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'type': 'all'<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}<br>
+&nbsp&nbsp&nbsp&nbsp}<br>
+&nbsp&nbsp&nbsp&nbspmediator.notification(mediator.config.CLIENT_TO_SERVER, sendData);<br>
 &nbsp&nbsp}<br>
-&nbsp&nbspmediator.notification(mediator.config.CLIENT_TO_SERVER, sendData);<br>
-&nbsp}<br>
 </div>
