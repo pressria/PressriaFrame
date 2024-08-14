@@ -30,8 +30,7 @@ for (var key in mediators) {
 	item.mediators = mediators;
 }
 ```
-<br>
-<br>
+
 #### 2. 모든 Mediator는 BaseMediator.js를 상속받음
 ```javascript
 import BaseMediator from './base/BaseMediator';
@@ -57,19 +56,19 @@ class TopMediator extends BaseMediator {
 
 export default TopMediator;
 ```
-<br>
-<br>
+
 #### 3. Mediator 호출
 PressriaFrame은 Message기반의 frame입니다.<br/>
 하나의 정의된 Class(Mediator)는 다른 Class(Mediator)를 호출할때 Direct로 호출 하지 않습니다.<br/>
 정의된 Message통해 data와 함께 호출 합니다.<br/>
 
 Sender:
-
+```javascript
     mediator.notification(mediator.config.GET_SHOP_LIST, {});
-    
-Receiver:
+ ```
 
+ Receiver:
+ ```javascript
 	respondToGetShopList(mediator, data) {
 		let sendData = {
 			'receiver': mediator.config.RECEIVE_SHOP_LIST
@@ -84,7 +83,8 @@ Receiver:
 	respondToReceiveShopList(mediator, data) {
 		....
 	}
-    
+```
+
 메세지를 보내고 받는 이 부분이 핵심적인 사용 방법 입니다.<br>
 메세지를 받는 부분의 Method 이름의 접두어는 "respondTo~~"로 정의 합니다.<br>
 접두어는 변경할수 있습니다. BaseMediator.js에 정의 되어 있습니다.<br>
@@ -92,8 +92,6 @@ Receiver:
 Mediator(Class)는 하나의 단위 기능입니다.<br>
 ![image](./output/assets/image/readme_1.jpg)
 
-<br>
-<br>
 
 #### 4. Config.js 정의
 Singleton Pattern으로 구성되어 있습니다.<br>
