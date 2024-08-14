@@ -8,8 +8,9 @@ Javascript 기반의 Frame이니까 그냥 Frame이라고 하겠습니다.<br/>
 #### 사용방법
 
 
-1. webpack entry에 정의된 index.js에서 mediator라고 정의된 js class를 등록<br>
+1. webpack entry에 정의된 index.js에서 mediator라고 정의된 js class를 등록
 
+```javascript
 const serverMediator = new ServerMediator();
 const loginMediator = new LoginMediator();
 const topMediator = new TopMediator();
@@ -28,7 +29,7 @@ for (var key in mediators) {
 	var item = mediators[key];
 	item.mediators = mediators;
 }
-    
+```
 
 PressriaFrame은 Message기반의 frame입니다.<br/>
 
