@@ -5,15 +5,16 @@
 <div>PressriaFrame은 Message기반의 frame입니다.</div>
 <div>하나의 정의된 Class(Mediator)는 다른 Class를 호출할때 Direct로 호출 하지 않습니다.</div>
 <div>정의된 Message를 data와 함께 호출 합니다.</div>
-<div>보내는쪽: mediator.notification(mediator.config.GET_SHOP_LIST, {});</div>
-<div>받는 쪽: 	respondToGetShopList(mediator, data) {
-		let sendData = {
-			'receiver': mediator.config.RECEIVE_SHOP_LIST
-			, 'namespace' : "shop.Shop.getShopList"
-			, "data": {
-				'type': 'all'
-			}
-		}
-		mediator.notification(mediator.config.CLIENT_TO_SERVER, sendData);
-	}
+<div>보내는쪽: <br> mediator.notification(mediator.config.GET_SHOP_LIST, {});</div>
+<br>
+<div>받는 쪽:<br> 	respondToGetShopList(mediator, data) {<br>
+		let sendData = {<br>
+			'receiver': mediator.config.RECEIVE_SHOP_LIST<br>
+			, 'namespace' : "shop.Shop.getShopList"<br>
+			, "data": {<br>
+				'type': 'all'<br>
+			}<br>
+		}<br>
+		mediator.notification(mediator.config.CLIENT_TO_SERVER, sendData);<br>
+	}<br>
 </div>
