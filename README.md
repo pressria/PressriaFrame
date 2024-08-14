@@ -1,12 +1,12 @@
 ### PressriaFrame
 PressriaFrame은 javascript Frame입니다.<br/>
-쉽게 이야기 하자면 React와 같은 Frontend Framework입니다.
-Framework이라고 하지 않는 이유는 React와 같이 많은 기능을 내포한 Framework는 아니여서 입니다.
-Javascript 기반의 Frame이니까 그냥 Frame이라고 하겠습니다.
-
-PressriaFrame은 Message기반의 frame입니다.
-하나의 정의된 Class(Mediator)는 다른 Class를 호출할때 Direct로 호출 하지 않습니다.
-정의된 Message를 data와 함께 호출 합니다.
+쉽게 이야기 하자면 React와 같은 Frontend Framework입니다.<br/>
+Framework이라고 하지 않는 이유는 React와 같이 많은 기능을 내포한 Framework는 아니여서 입니다.<br/>
+Javascript 기반의 Frame이니까 그냥 Frame이라고 하겠습니다.<br/>
+<br/>
+PressriaFrame은 Message기반의 frame입니다.<br/>
+하나의 정의된 Class(Mediator)는 다른 Class를 호출할때 Direct로 호출 하지 않습니다.<br/>
+정의된 Message를 data와 함께 호출 합니다.<br/>
 
 Sender:
 
