@@ -30,7 +30,7 @@ Receiver:
 사실 이러한 형태는 처음 만들어낸 형태는 아니고 예전에 사용했던 PureMVC의 ActionScript에서 사용하던 방식을 형태만 가져와서 Javascript로 만들었습니다.
 
 하나의 단위 기능을 Mediator로 정의 합니다.
-예를 들면
+![image](./output/assets/image/readme_1.jpg)
 
 
 메시지와 상태 정의는 config.js에서 합니다.
