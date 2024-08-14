@@ -8,7 +8,7 @@ Javascript 기반의 Frame이니까 그냥 Frame이라고 하겠습니다.<br/>
 #### 사용방법
 
 
-1. webpack entry에 정의된 index.js에서 mediator라고 정의된 js class를 등록
+####1. webpack entry에 정의된 index.js에서 mediator라고 정의된 js class를 등록
 
 ```javascript
 const serverMediator = new ServerMediator();
@@ -31,10 +31,36 @@ for (var key in mediators) {
 }
 ```
 
-PressriaFrame은 Message기반의 frame입니다.<br/>
+####2. 모든 Mediator는 BaseMediator.js를 상속받음
+```javascript
+import BaseMediator from './base/BaseMediator';
+import $ from '../js/lib/jquery-3.7.1.min.js';
 
+class TopMediator extends BaseMediator {
+	constructor(viewId) {
+		super();
+	}
+
+	respondToLoginSuccess(mediator, data) {
+		if(data.success) {
+			$("#logoutBtn").off("click").on("click", (e)=>{
+				mediator.setStyle("topMenu", {"display": "none"});
+				mediator.setStyle("layoutSidenav", {"display": "none"});
+	
+				$("body").removeClass("sb-nav-fixed");
+				mediator.setStyle("loginContainer", {"display": "block", "opacity":"1"});
+			})
+		}
+	}
+}
+
+export default TopMediator;
+```
+
+####3. Mediator 호출
+PressriaFrame은 Message기반의 frame입니다.<br/>
 하나의 정의된 Class(Mediator)는 다른 Class(Mediator)를 호출할때 Direct로 호출 하지 않습니다.<br/>
-정의된 Message를 data와 함께 호출 합니다.<br/>
+정의된 Message통해 data와 함께 호출 합니다.<br/>
 
 Sender:
 
