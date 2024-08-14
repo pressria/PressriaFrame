@@ -25,11 +25,14 @@ Receiver:
 		mediator.notification(mediator.config.CLIENT_TO_SERVER, sendData);
 	}
     
-이 부분이 핵심적인 사용 방법 입니다.
+메세지를 보내고 받는 이 부분이 핵심적인 사용 방법 입니다.
 
 사실 이러한 형태는 처음 만들어낸 형태는 아니고 예전에 사용했던 PureMVC의 ActionScript에서 사용하던 방식을 형태만 가져와서 Javascript로 만들었습니다.
 
-하나의 단위 기능을 Mediator로 정의 합니다.
+
+H2 Mediator정의 (Underline)
+-------------
+하나의 단위 기능을 Mediator(Class)로 정의 합니다.
 ![image](./output/assets/image/readme_1.jpg)
 
 
