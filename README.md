@@ -25,8 +25,6 @@ const mediators = {
 	, bodyMediator : bodyMediator
 }
 
-//Mediator(Class)에서 respondTo로 되어 있는 Method를 찾고 사용할수 있도록 한다.
-//Find the Method in Mediator(Class) that has respondTo and make it available.
 for (var key in mediators) {
 	var item = mediators[key];
 	item.mediators = mediators;
